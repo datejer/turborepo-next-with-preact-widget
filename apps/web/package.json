@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
+    "copy-widget": "cp ../../packages/preact-widget/dist/widget.js ./public/widget.js",
     "start": "next start",
     "lint": "next lint"
   },

@@ -1,11 +1,17 @@
 import Image from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import dynamic from "next/dynamic";
+
+const Widget = dynamic(() => import("./Widget").then((mod) => mod.Widget), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <Widget />
         <Image
           className={styles.logo}
           src="/next.svg"
